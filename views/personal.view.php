@@ -1,4 +1,4 @@
-aa<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -52,9 +52,7 @@ https://templatemo.com/tm-579-cyborg-gaming
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-
-          <h1>browse</h1>
-
+<h1>personal</h1>
         </div>
       </div>
     </div>

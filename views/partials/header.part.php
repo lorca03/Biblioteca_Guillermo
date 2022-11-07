@@ -5,8 +5,8 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="">
+                    <a href="/index.php" class="logo">
+                        <img src="assets/images/logo.png">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->
@@ -20,10 +20,10 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="/index.php" class="active">Home</a></li>
-                        <li><a href="/browse.php">Browse</a></li>
-                        <li><a href="/details.php">Details</a></li>
-                        <li><a href="/strems.php">Streams</a></li>
-                        <li><a href="/profile.php">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                        <li><a href="/libros.php">Libros</a></li>
+                        <li><a href="/administracion.php">Administracion</a></li>
+                        <li><a href="/contacto.php">Contacto</a></li>
+                        <li><a href="/personal.php">Personal</a></li>
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
