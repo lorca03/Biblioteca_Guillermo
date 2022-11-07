@@ -1,25 +1,36 @@
-
-<header class="header d-flex flex-row">
-		<div class="header_content d-flex flex-row align-items-center">
-			<!-- Logo -->
-			<div class="logo_container">
-				<div class="logo">
-					<img src="images/logo.png" alt="">
-					<span>Biblioteca</span>
-				</div>
-			</div>
-
-			<!-- Main Navigation -->
-			<nav class="main_nav_container">
-				<div class="main_nav">
-					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="/index.php">home</a></li>
-						<li class="main_nav_item"><a href="/libros.php">libros</a></li>
-						<li class="main_nav_item"><a href="/personal.php">zona personal</a></li>
-						<li class="main_nav_item"><a href="/administracion.php">administracion</a></li>
-						<li class="main_nav_item"><a href="/contact.php">contact</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-</header>
+ 
+ <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="/index.php" class="active">Home</a></li>
+                        <li><a href="/browse.php">Browse</a></li>
+                        <li><a href="/details.php">Details</a></li>
+                        <li><a href="/strems.php">Streams</a></li>
+                        <li><a href="/profile.php">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
