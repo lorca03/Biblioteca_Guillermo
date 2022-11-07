@@ -1,10 +1,11 @@
+
 <header class="header d-flex flex-row">
 		<div class="header_content d-flex flex-row align-items-center">
 			<!-- Logo -->
 			<div class="logo_container">
 				<div class="logo">
 					<img src="images/logo.png" alt="">
-					<span>course</span>
+					<span>Biblioteca</span>
 				</div>
 			</div>
 
@@ -13,17 +14,12 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="/index.php">home</a></li>
-						<li class="main_nav_item"><a href="/courses.php">courses</a></li>
-						<li class="main_nav_item"><a href="/elements.php">elements</a></li>
+						<li class="main_nav_item"><a href="/libros.php">libros</a></li>
+						<li class="main_nav_item"><a href="/personal.php">zona personal</a></li>
+						<li class="main_nav_item"><a href="/administracion.php">administracion</a></li>
 						<li class="main_nav_item"><a href="/contact.php">contact</a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
-		<div class="header_side d-flex flex-row justify-content-center align-items-center">
-			<img src="images/phone-call.svg" alt="">
-			<span>+43 4566 7788 2457</span>
-		</div>
-
-
 </header>
