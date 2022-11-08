@@ -1,5 +1,4 @@
- 
- <header class="header-area header-sticky">
+<header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -19,11 +18,12 @@
                     <!-- ***** Search End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="/index.php" class="active">Home</a></li>
-                        <li><a href="/libros.php">Libros</a></li>
-                        <li><a href="/administracion.php">Administracion</a></li>
-                        <li><a href="/contacto.php">Contacto</a></li>
-                        <li><a href="/personal.php">Personal</a></li>
+                    <li><a href="/index.php" class="<?php echo comprobarActiva('index.php')?'active':'' ;?>">Home</a></li>
+                        <li><a href="/libros.php" class="<?php echo comprobarActiva('libros.php')?'active':'' ;?>">Libros</a></li>
+                        <li><a href="/administracion.php" class="<?php echo comprobarActiva('administracion.php')?'active':''; ?>">Administracion</a></li>
+                        <li><a href="/contacto.php" class="<?php echo comprobarActiva('contacto.php')?'active':''; ?>">Contacto</a></li>
+                        <li><a href="/personal.php" class="<?php echo comprobarActiva('personal.php')?'active':''; ?>">Personal</a></li>
+                    </ul>   
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

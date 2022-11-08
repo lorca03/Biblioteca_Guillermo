@@ -1,33 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Cyborg - Awesome HTML5 Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/templatemo-cyborg-gaming.css">
-    <link rel="stylesheet" href="../assets/css/owl.css">
-    <link rel="stylesheet" href="../assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
-
-TemplateMo 579 Cyborg Gaming
-
-https://templatemo.com/tm-579-cyborg-gaming
-
--->
-  </head>
+<?php
+require_once 'partials/head.php';
+?>
 
 <body>
 
@@ -45,20 +21,41 @@ https://templatemo.com/tm-579-cyborg-gaming
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <?php   require_once 'partials/header.part.php'   ?>
+  <?php require_once 'partials/header.part.php'   ?>
   <!-- ***** Header Area End ***** -->
 
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-<h1>contacto</h1>
+          <h1 id="contacta">Contacta con nosotros</h1>
+          <div class="row">
+            <div class="col-8">
+              <form action="" method="post">
+                <div class="row">
+                  <label>Nombre</label>
+                  <input type="text" name="name">
+                </div>
+                <div class="row">
+                  <label>E-mail</label>
+                  <input type="email" name="email">
+                </div>
+                <div class="row">
+                  <label>Mensaje</label>
+                  <textarea name="mensaje" cols="30" rows="5" name="mensaje"></textarea>
+                </div>
+                <br>
+                <input type="submit" name="enviar" value="Enviar">
+              </form>
+            </div>
+            <div class="col-4"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <?php   require_once 'partials/footer.part.php'   ?>
+
+  <?php require_once 'partials/footer.part.php'   ?>
 
 
   <!-- Scripts -->
@@ -73,6 +70,6 @@ https://templatemo.com/tm-579-cyborg-gaming
   <script src="assets/js/custom.js"></script>
 
 
-  </body>
+</body>
 
 </html>
