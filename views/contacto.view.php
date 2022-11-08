@@ -8,16 +8,9 @@ require_once 'partials/head.php';
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
+  <?php
+  require_once 'partials/preload.php';
+  ?>
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -30,7 +23,7 @@ require_once 'partials/head.php';
         <div class="page-content">
           <h1 id="contacta">Contacta con nosotros</h1>
           <div class="row">
-            <div class="col-8">
+            <div class="col-6">
               <form action="" method="post">
                 <div class="row">
                   <label>Nombre</label>
@@ -48,7 +41,7 @@ require_once 'partials/head.php';
                 <input type="submit" name="enviar" value="Enviar">
               </form>
             </div>
-            <div class="col-4"></div>
+            <div class="col-6"></div>
           </div>
         </div>
       </div>

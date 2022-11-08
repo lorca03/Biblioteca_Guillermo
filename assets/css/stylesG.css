@@ -6,10 +6,10 @@ form{
     font-size: 20px;
 }
 form .row{
-    width: 60%;
+    width: 100%;
 }
 form input[type='text'], form input[type='email'],form textarea{
-    margin-left: 3%;
+    margin-left: 2%;
     border-radius: 5px;
     font-size: 16px;
 }
