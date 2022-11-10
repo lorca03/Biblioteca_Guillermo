@@ -21,7 +21,7 @@ require_once 'partials/preload.php';
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-<h1>Administracion</h1>
+          <h1>Administracion</h1>
         </div>
       </div>
     </div>

@@ -27,15 +27,27 @@ require_once 'partials/head.php';
               <form action="" method="post">
                 <div class="row">
                   <label>Nombre</label>
-                  <input type="text" name="name">
+                  <input type="text" name="name" value="<?php if (isset($nombre) && $error==true) {
+                                                          echo $nombre;
+                                                        } else {
+                                                          echo '';
+                                                        } ?>">
                 </div>
                 <div class="row">
                   <label>E-mail</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" value="<?php if (isset($email) && $error==true && $erroremail==false) {
+                                                            echo $email;
+                                                          }else {
+                                                            echo '';
+                                                          }?>">
                 </div>
                 <div class="row">
                   <label>Mensaje</label>
-                  <textarea name="mensaje" cols="30" rows="5" name="mensaje"></textarea>
+                  <textarea name="mensaje" cols="30" rows="5" name="mensaje"><?php if (isset($mensaje) && $error==true) {
+                                                                                      echo $mensaje;
+                                                                                    }else {
+                                                                                      echo '';
+                                                                                    } ?></textarea>
                 </div>
                 <br>
                 <input type="submit" name="enviar" value="Enviar">
