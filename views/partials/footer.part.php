@@ -20,11 +20,11 @@
         </p>
         <br>
         <?php
-        require_once 'entity/colaboladores.php';
+        require_once 'entity/colaborador.php';
         $colaboladores = array(
-          new Colabolador('Maria', 'Imagen de Maria', 'colaboladorMaria.jfif'),
-          new Colabolador('Jose', 'Imagen de Jose', 'colaboladorJose.jfif'),
-          new Colabolador('Pepe', 'Imagen de Pepe', 'colaboladorPepe.jfif')
+          new Colaborador('Maria', 'Imagen de Maria', 'colaboladorMaria.jfif'),
+          new Colaborador('Jose', 'Imagen de Jose', 'colaboladorJose.jfif'),
+          new Colaborador('Pepe', 'Imagen de Pepe', 'colaboladorPepe.jfif')
         );
         shuffle($colaboladores);
         ?>

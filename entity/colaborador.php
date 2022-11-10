@@ -1,6 +1,6 @@
 <?php
 
-class Colabolador
+class Colaborador
 {
     private $nombre;
     private $descripcion;

@@ -21,7 +21,28 @@ require_once 'partials/preload.php';
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-          <h1>Administracion</h1>
+          <h1 id="titulo">Colaboradores</h1>
+          <div class="row">
+            <div class="col-6">
+              <form action="" method="post">
+                <div class="row">
+                  <label>Nombre</label>
+                  <input type="text" name="nameCol">
+                </div>
+                <div class="row">
+                  <label>Descripcion</label>
+                  <input type="text" name="descripcionCol">
+                </div>
+                <div class="row">
+                  <label>Archivo</label>
+                  <input type="file" name="imagen">
+                </div>
+                <br>
+                <input type="submit" name="enviar" value="Enviar">
+              </form>
+            </div>
+            <div class="col-6"></div>
+          </div>
         </div>
       </div>
     </div>

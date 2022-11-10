@@ -21,7 +21,7 @@ require_once 'partials/head.php';
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-          <h1 id="contacta">Contacta con nosotros</h1>
+          <h1 id="titulo">Contacta con nosotros</h1>
           <div class="row">
             <div class="col-6">
               <form action="" method="post">
