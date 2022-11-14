@@ -4,14 +4,14 @@ class Colaborador
 {
     private $nombre;
     private $descripcion;
-    private $nombreArchivo;
-    const RUTA_IMAGEN = '../../assets/images/';
+    private $imagen;
+    const RUTA_IMAGEN = 'assets/images/';
 
-    public function __construct($nombre, $descripcion,$nombreArchivo)
+    public function __construct($nombre, $descripcion,$imagen)
     {
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
-        $this->nombreArchivo = $nombreArchivo;
+        $this->imagen = $imagen;
     }
     /*Getters y Setters */
     public function getNombre()
@@ -37,6 +37,6 @@ class Colaborador
 
     public function getUrlImagen()
     {
-        return self::RUTA_IMAGEN.$this->nombreArchivo;
+        return self::RUTA_IMAGEN.$this->imagen;
     }
 }

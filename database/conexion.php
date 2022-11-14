@@ -8,7 +8,7 @@ class Conexion{
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_PERSISTENT =>true
             ];
-                $conexion = new PDO('mysql:host=localhost;dbname=pruebas','root','',$opciones);
+                $conexion = new PDO('mysql:host=localhost;dbname=biblioteca','Guille','guille',$opciones);
                 
         }
         
@@ -20,4 +20,3 @@ class Conexion{
     }
 }
 
-Conexion::make();

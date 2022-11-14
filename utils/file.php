@@ -1,5 +1,5 @@
 <?php
-require_once './exeptions/fileException.php';
+require_once 'exeptions/fileException.php';
 
 class File
 {
@@ -12,21 +12,30 @@ class File
     {
         $this->file = $_FILES[$campo];
         $this->filetype=$this->file['type'];
-        if ( $this->filetype == "image/png" ||  $this->filetype == "image/jpg" ||  $this->filetype == "image/jpeg" ||  $this->filetype == "image/gif") {
+        if ( $this->filetype !== "image/png" &&  $this->filetype !== "image/jpg" &&  $this->filetype !== "image/jpeg" &&  $this->filetype !== "image/gif") {
             throw new File_exception('La imagen no es del tipo correcto. Debe ser jpg/jpeg/png/gif');
         }
-        $this->nombre = $this->file['name'];
+        $this->filename = $this->file['name'];
     }
 
     function saveUploadFile($rutadestino)
     {
         if (!is_file($rutadestino.$this->filename)) {
-            $enviada = move_uploaded_file($this->file["tmp_name"], $rutadestino . $this->filename);
+            $enviada = move_uploaded_file($this->file["tmp_name"], $rutadestino.$this->filename);
             if (!$enviada) {
                 throw new File_exception('La imagen no se ha subido con exito');
             } 
         }else{
-            echo "Ya existe el archivo";
+            throw new File_exception('Ya existe el archivo');
         }
+    }
+
+    public function getFiletype()
+    {
+        return $this->filetype;
+    }
+    public function getFilename()
+    {
+        return $this->filename;
     }
 }

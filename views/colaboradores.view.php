@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <?php  
   require_once 'partials/head.php';   
@@ -24,7 +24,7 @@ require_once 'partials/preload.php';
           <h1 id="titulo">Colaboradores</h1>
           <div class="row">
             <div class="col-6">
-              <form action="" method="post">
+              <form action="" method="post" enctype="multipart/form-data" >
                 <div class="row">
                   <label>Nombre</label>
                   <input type="text" name="nameCol">
