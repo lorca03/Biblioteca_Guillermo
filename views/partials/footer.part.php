@@ -1,9 +1,10 @@
 <style>
-  .imagenes{
+  .imagenes {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   img {
     width: 150px;
     height: 90px;
@@ -21,17 +22,24 @@
         <br>
         <?php
         require_once 'entity/colaborador.php';
-        $colaboladores = array(
-          new Colaborador('Maria', 'Imagen de Maria', 'colaboladorMaria.jfif'),
-          new Colaborador('Jose', 'Imagen de Jose', 'colaboladorJose.jfif'),
-          new Colaborador('Pepe', 'Imagen de Pepe', 'colaboladorPepe.jfif')
+        require_once 'database/conexion.php';
+        $config = require 'app/config.php';
+        $conexion = Conexion::make($config);
+        $constructor = array(
+          'nombre',
+          'descripcion',
+          'imagen'
         );
-        shuffle($colaboladores);
+        $consulta2 = 'SELECT * FROM COLABOLADORES';
+        $resultado2 = $conexion->prepare($consulta2);
+        $resultado2->execute();
+        $arraycolab = $resultado2->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Colaborador', $constructor);
+        shuffle($arraycolab);
         ?>
         <div class="container imagenes">
           <?php
-          foreach ($colaboladores as $colabolador) {
-            echo "<img src='" . $colabolador->getUrlImagen() . "' alt='" . $colabolador->getDescripcion() . "'>";
+           for ($i=0; $i < 3; $i++) { 
+            echo "<img src='" . $arraycolab[$i]->getUrlImagen() . "' alt='" . $arraycolab[$i]->getDescripcion() . "'>";
           } ?>
 
         </div>

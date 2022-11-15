@@ -39,4 +39,8 @@ class Colaborador
     {
         return self::RUTA_IMAGEN.$this->imagen;
     }
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
 }

@@ -20,7 +20,7 @@
                     <ul class="nav">
                     <li><a href="/index.php" class="<?php echo comprobarActiva('index.php')?'active':'' ;?>">Home</a></li>
                         <li><a href="/libros.php" class="<?php echo comprobarActiva('libros.php')?'active':'' ;?>">Libros</a></li>
-                        <li><a href="/colaboradores.php" class="<?php echo comprobarActiva('colaboladores.php')?'active':''; ?>">Colaboladores</a></li>
+                        <li><a href="/colaboradores.php" class="<?php echo comprobarActiva('colaboradores.php')?'active':''; ?>">Colaboladores</a></li>
                         <li><a href="/contacto.php" class="<?php echo comprobarActiva('contacto.php')?'active':''; ?>">Contacto</a></li>
                         <li><a href="/personal.php" class="<?php echo comprobarActiva('personal.php')?'active':''; ?>">Personal</a></li>
                     </ul>   

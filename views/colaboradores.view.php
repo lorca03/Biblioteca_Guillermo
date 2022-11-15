@@ -9,7 +9,7 @@
 
   <!-- ***** Preloader Start ***** -->
   <?php
-require_once 'partials/preload.php';
+//require_once 'partials/preload.php';
 ?>
   <!-- ***** Preloader End ***** -->
 
