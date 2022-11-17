@@ -22,18 +22,19 @@
         <br>
         <?php
         require_once 'entity/colaborador.php';
-        require_once 'database/conexion.php';
+        require_once 'core/app.php';
+        require_once 'database/queryBuilder.php';
+
         $config = require 'app/config.php';
-        $conexion = Conexion::make($config);
+        $conexion = App::getConexion();
+
         $constructor = array(
           'nombre',
           'descripcion',
           'imagen'
         );
-        $consulta2 = 'SELECT * FROM COLABOLADORES';
-        $resultado2 = $conexion->prepare($consulta2);
-        $resultado2->execute();
-        $arraycolab = $resultado2->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Colaborador', $constructor);
+        $selectColab= new QueryBuilder('colaboradores','Colaborador',$constructor);
+        $arraycolab = $selectColab->findAll();
         shuffle($arraycolab);
         ?>
         <div class="container imagenes">

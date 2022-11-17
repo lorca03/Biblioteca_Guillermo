@@ -1,13 +1,13 @@
 <?php
-
-class Colaborador
+require_once 'database/IEntity.php';
+class Colaborador implements IEntity
 {
     private $nombre;
     private $descripcion;
     private $imagen;
     const RUTA_IMAGEN = 'assets/images/';
 
-    public function __construct($nombre, $descripcion,$imagen)
+    public function __construct($nombre, $descripcion, $imagen)
     {
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
@@ -42,5 +42,12 @@ class Colaborador
     public function getImagen()
     {
         return $this->imagen;
+    }
+    public function toArray(){
+        return [
+            'nombre'=>$this->getNombre(),
+            'descripcion'=>$this->getDescripcion(),
+            'imagen'=>$this->getImagen()
+        ];
     }
 }

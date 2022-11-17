@@ -27,15 +27,15 @@
               <form action="" method="post" enctype="multipart/form-data" >
                 <div class="row">
                   <label>Nombre</label>
-                  <input type="text" name="nameCol">
+                  <input required type="text" name="nameCol">
                 </div>
                 <div class="row">
                   <label>Descripcion</label>
-                  <input type="text" name="descripcionCol">
+                  <input required type="text" name="descripcionCol">
                 </div>
                 <div class="row">
                   <label>Archivo</label>
-                  <input type="file" name="imagen">
+                  <input required type="file" name="imagen">
                 </div>
                 <br>
                 <input type="submit" name="enviar" value="Enviar">

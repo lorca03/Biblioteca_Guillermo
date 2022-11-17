@@ -1,5 +1,8 @@
 <?php
 
+require_once 'core/app.php';
+$config = require_once 'app/config.php';
+App::bind('config', $config);
 require_once 'utils/activa.php';
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 $error = false;
