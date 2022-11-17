@@ -7,11 +7,6 @@ require_once 'partials/head.php';
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <?php
-  require_once 'partials/preload.php';
-  ?>
-  <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <?php require_once 'partials/header.part.php'   ?>
