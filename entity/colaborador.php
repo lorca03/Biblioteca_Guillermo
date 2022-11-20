@@ -5,7 +5,7 @@ class Colaborador implements IEntity
     private $nombre;
     private $descripcion;
     private $imagen;
-    const RUTA_IMAGEN = 'assets/images/';
+    const RUTA_IMAGEN = 'assets/images/colaboradores/';
 
     public function __construct($nombre, $descripcion, $imagen)
     {
