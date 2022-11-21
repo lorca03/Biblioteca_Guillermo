@@ -4,8 +4,8 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="/index.php" class="logo">
-                        <img src="assets/images/logo2.png">
+                    <a href="/"  class="logo">
+                        <img style="width: 40%; height: 80%;" src="assets/images/logo2.png">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->

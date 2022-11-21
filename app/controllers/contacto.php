@@ -1,9 +1,5 @@
 <?php
 
-require_once 'core/app.php';
-$config = require_once 'app/config.php';
-App::bind('config', $config);
-require_once 'utils/activa.php';
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 $error = false;
 $erroremail = false;
@@ -23,3 +19,21 @@ if ($enviar === 'Enviar') {
     }
 }
 require_once 'app/views/contacto.view.php';
+
+$conexion = App::getConexion();
+$constructor = array(
+    'nombre',
+    'descripcion',
+    'imagen'
+);
+$selectColab = new ColaboradorRepositorio();
+$arraycolab = $selectColab->findAll();
+shuffle($arraycolab);
+?>
+<div class="container imagenesFooter">
+    <?php
+    for ($i = 0; $i < 3; $i++) {
+        echo "<img src='" . $arraycolab[$i]->getUrlImagen() . "' alt='" . $arraycolab[$i]->getDescripcion() . "'>";
+    } ?>
+
+</div>

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+require_once 'app/views/partials/head.php';
+?>
+<style>
+.imagenesFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-<?php  
-  require_once 'partials/head.php';   
-   ?>
-
+.imagenesFooter img {
+    width: 150px;
+    height: 90px;
+}
+</style>
 <body>
 
 
- <!-- ***** Header Area Start ***** -->
-<?php  
-  require_once 'partials/header.part.php';   
-   ?>
+  <!-- ***** Header Area Start ***** -->
+  <?php
+  require_once 'app/views/partials/header.part.php';
+  ?>
 
   <!-- ***** Header Area End ***** -->
 
@@ -19,14 +29,14 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-<h1>Home</h1>
-          
+          <h1>Home</h1>
         </div>
       </div>
     </div>
   </div>
-  
-  <?php   require_once 'partials/footer.part.php'  ; ?>
+
+  <?php require_once 'app/views/partials/footer.part.php';
+  ?>
 
 
   <!-- Scripts -->
@@ -39,8 +49,7 @@
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  
 
-
-  </body>
-
+</body>
 </html>

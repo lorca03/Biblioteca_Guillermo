@@ -1,12 +1,4 @@
 <?php
-require_once 'utils/activa.php';
-require_once 'entity/colaborador.php';
-require_once 'repository/colaboradorRepositorio.php';
-require_once 'database/queryBuilder.php';
-require_once 'core/app.php';
-require_once './utils/file.php';
-$config = require_once 'app/config.php';
-App::bind('config', $config);
 
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 try {
@@ -23,3 +15,21 @@ try {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
 }
 require_once 'app/views/colaboradores.view.php';
+
+$conexion = App::getConexion();
+$constructor = array(
+    'nombre',
+    'descripcion',
+    'imagen'
+);
+$selectColab = new ColaboradorRepositorio();
+$arraycolab = $selectColab->findAll();
+shuffle($arraycolab);
+?>
+<div class="container imagenesFooter">
+    <?php
+    for ($i = 0; $i < 3; $i++) {
+        echo "<img src='" . $arraycolab[$i]->getUrlImagen() . "' alt='" . $arraycolab[$i]->getDescripcion() . "'>";
+    } ?>
+
+</div>

@@ -4,7 +4,18 @@
 <?php
 require_once 'partials/head.php';
 ?>
+<style>
+.imagenesFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.imagenesFooter img {
+    width: 150px;
+    height: 90px;
+}
+</style>
 <body>
 
 

@@ -13,9 +13,6 @@ form input[type='text'], form input[type='email'],form textarea{
     border-radius: 5px;
     font-size: 16px;
 }
-/*form input[type='file']{
-    
-}*/
 form input[type='submit']{
     border: 0px;
     color: white;
