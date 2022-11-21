@@ -18,11 +18,11 @@
                     <!-- ***** Search End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                    <li><a href="/index.php" class="<?php echo comprobarActiva('index.php')?'active':'' ;?>">Home</a></li>
-                        <li><a href="/libros.php" class="<?php echo comprobarActiva('libros.php')?'active':'' ;?>">Libros</a></li>
-                        <li><a href="/colaboradores.php" class="<?php echo comprobarActiva('colaboradores.php')?'active':''; ?>">Colaboladores</a></li>
-                        <li><a href="/contacto.php" class="<?php echo comprobarActiva('contacto.php')?'active':''; ?>">Contacto</a></li>
-                        <li><a href="/personal.php" class="<?php echo comprobarActiva('personal.php')?'active':''; ?>">Personal</a></li>
+                    <li><a href="/" class="<?php echo comprobarActiva('index')?'active':'' ;?>">Home</a></li>
+                        <li><a href="/libros" class="<?php echo comprobarActiva('libros')?'active':'' ;?>">Libros</a></li>
+                        <li><a href="/colaboradores" class="<?php echo comprobarActiva('colaboradores')?'active':''; ?>">Colaboladores</a></li>
+                        <li><a href="/contacto" class="<?php echo comprobarActiva('contacto')?'active':''; ?>">Contacto</a></li>
+                        <li><a href="/personal" class="<?php echo comprobarActiva('personal')?'active':''; ?>">Personal</a></li>
                     </ul>   
                     </ul>   
                     <a class='menu-trigger'>

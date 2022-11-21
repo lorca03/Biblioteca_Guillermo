@@ -24,6 +24,7 @@
         require_once 'entity/colaborador.php';
         require_once 'core/app.php';
         require_once 'database/queryBuilder.php';
+        require_once 'repository/colaboradorRepositorio.php';
 
         $config = require 'app/config.php';
         $conexion = App::getConexion();
@@ -33,7 +34,7 @@
           'descripcion',
           'imagen'
         );
-        $selectColab= new QueryBuilder('colaboradores','Colaborador',$constructor);
+        $selectColab= new ColaboradorRepositorio();
         $arraycolab = $selectColab->findAll();
         shuffle($arraycolab);
         ?>

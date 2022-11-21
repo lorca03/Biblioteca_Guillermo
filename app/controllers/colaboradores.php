@@ -22,4 +22,4 @@ try {
 } catch (Exception $ex) {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
 }
-require_once 'views/colaboradores.view.php';
+require_once 'app/views/colaboradores.view.php';

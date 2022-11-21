@@ -22,4 +22,4 @@ if ($enviar === 'Enviar') {
         }
     }
 }
-require_once 'views/contacto.view.php';
+require_once 'app/views/contacto.view.php';
