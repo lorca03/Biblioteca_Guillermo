@@ -7,6 +7,7 @@ require_once 'database/queryBuilder.php';
 require_once 'utils/activa.php';
 require_once 'utils/file.php';
 require_once 'core/router.php';
+require_once 'exeptions/notFoundExeption.php';
 $config = require 'app/config.php';
 App::bind('config', $config);
 $conexion = App::getConexion();
