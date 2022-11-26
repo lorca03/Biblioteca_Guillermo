@@ -1,12 +1,15 @@
 <?php
+
+$usuarios=new UsuarioRepositorio();
+$libros=new LibrosRepositorio();
+$prestamos=new PrestamosRepositorio();
+$mensajes=new MensajeRepositorio();
+$colaboradores=new ColaboradorRepositorio();
+$totales=[count($usuarios->findAll()),count($libros->findAll()),count($prestamos->findAll()),count($mensajes->findAll()),count($colaboradores->findAll())];
+
+
 require_once 'app/views/index.view.php';
 
-$conexion = App::getConexion();
-$constructor = array(
-    'nombre',
-    'descripcion',
-    'imagen'
-);
 $selectColab = new ColaboradorRepositorio();
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);

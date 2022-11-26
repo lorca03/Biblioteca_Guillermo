@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<?php  
-  require_once 'partials/head.php';   
-   ?>
+<?php
+require_once 'partials/head.php';
+?>
 <style>
-.imagenesFooter {
+  .imagenesFooter {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.imagenesFooter img {
+  .imagenesFooter img {
     width: 150px;
     height: 90px;
-}
+  }
+
+  #tituloLibros {
+    text-align: center;
+    color: #f05c8f;
+  }
+
+  #tituloLibros h1 {
+    color: #f05c8f;
+  }
 </style>
+
 <body>
 
 
   <!-- ***** Header Area Start ***** -->
-  <?php   require_once 'partials/header.part.php'   ?>
+  <?php require_once 'partials/header.part.php'   ?>
   <!-- ***** Header Area End ***** -->
 
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-
-          <h1>libros</h1>
+          <div class="row" id="tituloLibros">
+            <h1>Libros</h1>
+          </div>
 
         </div>
       </div>
     </div>
   </div>
-  
-  <?php   require_once 'partials/footer.part.php'   ?>
+
+  <?php require_once 'partials/footer.part.php'   ?>
 
 
   <!-- Scripts -->
@@ -50,6 +61,6 @@
   <script src="assets/js/custom.js"></script>
 
 
-  </body>
+</body>
 
 </html>

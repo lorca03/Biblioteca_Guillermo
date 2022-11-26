@@ -2,12 +2,6 @@
 
 require_once 'app/views/personal.view.php'; 
 
-$conexion = App::getConexion();
-$constructor = array(
-    'nombre',
-    'descripcion',
-    'imagen'
-);
 $selectColab = new ColaboradorRepositorio();
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);

@@ -1,25 +1,27 @@
-#titulo{
-    color: #f05c8f;
-}
-form{
-    color: white;
-    font-size: 20px;
-}
-form .row{
-    width: 100%;
-}
-form input[type='text'], form input[type='email'],form textarea{
-    margin-left: 2%;
-    border-radius: 5px;
-    font-size: 16px;
-}
-form input[type='submit']{
-    border: 0px;
-    color: white;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 15px;
-    background-color: #e75e8d;
-}
 
+#titulo {
+  color: #f05c8f;
+}
+form {
+  color: white;
+  font-size: 20px;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  margin-left: 2%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+form input[type="submit"] {
+  border: 0px;
+  color: white;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  background-color: #e75e8d;
+}
+#tituloHome {
+  background-color: red !important;
+}

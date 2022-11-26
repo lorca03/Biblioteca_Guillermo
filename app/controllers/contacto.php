@@ -17,15 +17,13 @@ if ($enviar === 'Enviar') {
             echo '<script language="javascript"> alert("El email no es correcto");</script>';
         }
     }
+    if ($error==false && $erroremail==false) {
+        $repoMensaje = new MensajeRepositorio();
+        $repoMensaje->save(new Mensaje($email,$nombre,$mensaje));
+    }
 }
 require_once 'app/views/contacto.view.php';
 
-$conexion = App::getConexion();
-$constructor = array(
-    'nombre',
-    'descripcion',
-    'imagen'
-);
 $selectColab = new ColaboradorRepositorio();
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);

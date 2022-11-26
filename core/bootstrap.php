@@ -1,6 +1,17 @@
 <?php
+/* repositorios */
+require_once 'repository/usuarioRepositorio.php';
+require_once 'repository/librosRepositorio.php';
+require_once 'repository/mensajeRepositorio.php';
+require_once 'repository/prestamosRepositorio.php';
 require_once 'repository/colaboradorRepositorio.php';
+/*entidades */
 require_once 'entity/colaborador.php';
+require_once 'entity/usuario.php';
+require_once 'entity/libro.php';
+require_once 'entity/mensaje.php';
+require_once 'entity/prestamo.php';
+
 require_once 'core/request.php';
 require_once 'core/app.php';
 require_once 'database/queryBuilder.php';

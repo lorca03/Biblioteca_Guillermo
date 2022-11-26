@@ -4,17 +4,41 @@
 require_once 'app/views/partials/head.php';
 ?>
 <style>
-.imagenesFooter {
+  .imagenesFooter {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.imagenesFooter img {
+  .imagenesFooter img {
     width: 150px;
     height: 90px;
-}
+  }
+
+  #tituloHome {
+    text-align: center;
+    color: #f05c8f;
+  }
+  #tituloHome h1{
+    color: #f05c8f;
+  }
+  #totales .total {
+    margin-top: 5px;
+    text-align: center;
+    padding: 12px;
+    height: 85px;
+    border-radius: 20px;
+    border: 2px solid #71c5d0;
+  }
+  #totales .total h3{
+    color: white ;
+    font-weight: 500;
+  }
+  #totales .total h4{
+    color: #f05c8f;
+  }
 </style>
+
 <body>
 
 
@@ -29,7 +53,28 @@ require_once 'app/views/partials/head.php';
     <div class="row">
       <div class="col-lg-12">
         <div class="page-content">
-          <h1>Home</h1>
+          <div class="row" id="tituloHome">
+            <h1>Home</h1>
+          </div><br><br>
+          <div class="row" id="totales">
+            <div class="col"></div>
+            <div class="col total"><h3>Usuarios</h3><h4><?php echo $totales[0]; ?></h4>
+            </div>
+            <div class="col"></div>
+            <div class="col total"><h3>Libros</h3><h4><?php echo $totales[1]; ?></h4></div>
+            <div class="col"></div>
+            <div class="col total"><h3>Prestamos</h3><h4><?php echo $totales[2]; ?></h4></div>
+            <div class="col"></div>
+          </div>
+          <br>
+          <div class="row" id="totales">
+            <div class="col"></div>
+            <div class="col total"><h3>Colaboradores</h3><h4><?php echo $totales[4]; ?></h4></div>
+            <div class="col"></div>
+            <div class="col total"><h3>Mensajes</h3><h4><?php echo $totales[3]; ?></h4></div>
+            <div class="col"></div>
+          </div>
+          <br>
         </div>
       </div>
     </div>
@@ -49,7 +94,8 @@ require_once 'app/views/partials/head.php';
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
-  
+
 
 </body>
+
 </html>

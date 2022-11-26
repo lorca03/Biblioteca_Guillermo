@@ -20,12 +20,12 @@ class QueryBuilder
         if ($pdoStatment->execute() === false) {
             throw new Database_exception('No se ha podido ejecutar la query solicitada');
         }
-        return $pdoStatment->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Colaborador', $this->constructor);
+        return $pdoStatment->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $this->entidad, $this->constructor);
     }
-    public function save($entidad)
+    public function save($entidadObjeto)
     {
         try {
-            $parametros=$entidad->toArray();
+            $parametros=$entidadObjeto->toArray();
             $sql= sprintf('insert into %s (%s) values (%s)',
             $this->tabla,
             implode(', ',array_keys($parametros)) ,

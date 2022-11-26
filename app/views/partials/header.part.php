@@ -24,7 +24,6 @@
                         <li><a href="/contacto" class="<?php echo comprobarActiva('contacto')?'active':''; ?>">Contacto</a></li>
                         <li><a href="/personal" class="<?php echo comprobarActiva('personal')?'active':''; ?>">Personal</a></li>
                     </ul>   
-                    </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>

@@ -6,7 +6,7 @@ class Mensaje implements IEntity
     private $mensaje;
     private $email;
 
-    public function __construct($nombre, $mensaje, $email)
+    public function __construct($email,$nombre, $mensaje, )
     {
         $this->nombre = $nombre;
         $this->mensaje = $mensaje;

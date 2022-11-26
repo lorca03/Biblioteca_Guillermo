@@ -15,6 +15,16 @@ require_once 'partials/head.php';
     width: 150px;
     height: 90px;
 }
+#contactaContai{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+#contacta{
+  width: 350px;
+  height: 270px;
+}
 </style>
 <body>
 
@@ -59,7 +69,9 @@ require_once 'partials/head.php';
                 <input type="submit" name="enviar" value="Enviar">
               </form>
             </div>
-            <div class="col-6"></div>
+            <div id="contactaContai" class="col-6">
+              <img  id="contacta" src="/assets/images/contacta.PNG" alt="NO Funciona la imagen">
+            </div>
           </div>
         </div>
       </div>
