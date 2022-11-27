@@ -1,6 +1,9 @@
 
 #titulo {
+  
+  text-align: center;
   color: #f05c8f;
+  text-shadow: 2px 2px 3px #71c5d0;
 }
 form {
   color: white;
@@ -8,20 +11,21 @@ form {
 }
 form input[type="text"],
 form input[type="email"],
+form input[type="number"],
 form textarea {
   margin-left: 2%;
   border-radius: 5px;
   font-size: 16px;
 }
 form input[type="submit"] {
-  border: 0px;
+  border: 1px solid white;
   color: white;
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #e75e8d;
 }
-#tituloHome {
-  background-color: red !important;
-}
+
+
+

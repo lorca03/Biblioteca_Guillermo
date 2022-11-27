@@ -2,66 +2,66 @@
 require_once 'database/IEntity.php';
 class Usuario implements IEntity
 {
-    private $cod_usuario;
-    private $nombre;
-    private $apellidos;
+    private $Cod_usuario;
+    private $Nombre;
+    private $Apellidos;
     private $DNI;
-    private $domicilio;
-    private $poblacion;
-    private $fecha_nacimiento;
+    private $Domicilio;
+    private $Poblacion;
+    private $Fecha_nacimiento;
 
-    public function __construct($cod_usuario, $nombre, $apellidos, $DNI, $domicilio, $poblacion, $fecha_nacimiento)
+    public function __construct($Cod_usuario, $Nombre, $Apellidos, $DNI, $Domicilio, $Poblacion, $Fecha_nacimiento)
     {
-        $this->cod_usuario = $cod_usuario;
-        $this->nombre = $nombre;
-        $this->apellidos = $apellidos;
+        $this->Cod_usuario = $Cod_usuario;
+        $this->Nombre = $Nombre;
+        $this->Apellidos = $Apellidos;
         $this->DNI = $DNI;
-        $this->domicilio = $domicilio;
-        $this->poblacion = $poblacion;
-        $this->fecha_nacimiento = $fecha_nacimiento;
+        $this->Domicilio = $Domicilio;
+        $this->Poblacion = $Poblacion;
+        $this->Fecha_nacimiento = $Fecha_nacimiento;
     }
 
     public function toArray()
     {
         return [
-            'Cod_usuario' => $this->getcod_usuario(),
-            'Nombre' => $this->getnombre(),
-            'Apellidos' => $this->getapellidos(),
+            'Cod_usuario' => $this->getCod_usuario(),
+            'Nombre' => $this->getNombre(),
+            'Apellidos' => $this->getApellidos(),
             'DNI' => $this->getDNI(),
-            'Domicilio' => $this->getdomicilio(),
-            'Poblacion' => $this->getpoblacion(),
-            'Fecha_nacimiento' => $this->getfecha_nacimiento()
+            'Domicilio' => $this->getDomicilio(),
+            'Poblacion' => $this->getPoblacion(),
+            'Fecha_nacimiento' => $this->getFecha_nacimiento()
         ];
     }
     /*Getters y settesrs */
 
-    public function getcod_usuario()
+    public function getCod_usuario()
     {
-        return $this->cod_usuario;
+        return $this->Cod_usuario;
     }
-    public function setcod_usuario($cod_usuario)
+    public function setCod_usuario($Cod_usuario)
     {
-        $this->cod_usuario = $cod_usuario;
+        $this->Cod_usuario = $Cod_usuario;
 
         return $this;
     }
-    public function getnombre()
+    public function getNombre()
     {
-        return $this->nombre;
+        return $this->Nombre;
     }
-    public function setnombre($nombre)
+    public function setNombre($Nombre)
     {
-        $this->nombre = $nombre;
+        $this->Nombre = $Nombre;
 
         return $this;
     }
-    public function getapellidos()
+    public function getApellidos()
     {
-        return $this->apellidos;
+        return $this->Apellidos;
     }
-    public function setapellidos($apellidos)
+    public function setApellidos($Apellidos)
     {
-        $this->apellidos = $apellidos;
+        $this->Apellidos = $Apellidos;
 
         return $this;
     }
@@ -75,33 +75,33 @@ class Usuario implements IEntity
 
         return $this;
     }
-    public function getdomicilio()
+    public function getDomicilio()
     {
-        return $this->domicilio;
+        return $this->Domicilio;
     }
-    public function setdomicilio($domicilio)
+    public function setDomicilio($Domicilio)
     {
-        $this->domicilio = $domicilio;
+        $this->Domicilio = $Domicilio;
 
         return $this;
     }
-    public function getpoblacion()
+    public function getPoblacion()
     {
-        return $this->poblacion;
+        return $this->Poblacion;
     }
-    public function setpoblacion($poblacion)
+    public function setPoblacion($Poblacion)
     {
-        $this->poblacion = $poblacion;
+        $this->Poblacion = $Poblacion;
 
         return $this;
     }
-    public function getfecha_nacimiento()
+    public function getFecha_nacimiento()
     {
-        return $this->fecha_nacimiento;
+        return $this->Fecha_nacimiento;
     }
-    public function setfecha_nacimiento($fecha_nacimiento)
+    public function setFecha_nacimiento($Fecha_nacimiento)
     {
-        $this->fecha_nacimiento = $fecha_nacimiento;
+        $this->Fecha_nacimiento = $Fecha_nacimiento;
 
         return $this;
     }

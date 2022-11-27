@@ -36,4 +36,20 @@ class QueryBuilder
             throw new Database_exception('No se ha podido ejecutar la Query solicitada');
         }
     }
+    public function execute($sql,$tipo)
+    {
+        try {
+            $pdoStatment=$this->conexion->prepare($sql);
+            if ($pdoStatment->execute() === false) {
+                throw new Database_exception('No se ha podido ejecutar la query solicitada');
+            }
+            if ($tipo=='objetos') {
+                return $pdoStatment->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $this->entidad, $this->constructor);
+            }else {
+            return $pdoStatment->fetchAll();
+            }
+        } catch (PDOException $th) {
+            throw new Database_exception('No se ha podido ejecutar la Query solicitada');
+        }
+    }
 }

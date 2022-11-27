@@ -2,106 +2,106 @@
 require_once 'database/IEntity.php';
 class Prestamo implements IEntity
 {
-    private $num_pedido;
-    private $cod_libro;
-    private $cod_usuario;
-    private $fecha_salida;
-    private $fecha_maxima_dev;
-    private $fecha_devolucion;
-    private $devuelto;
+    private $Num_pedido;
+    private $Cod_libro;
+    private $Cod_usuario;
+    private $Fecha_salida;
+    private $Fecha_maxima_dev;
+    private $Fecha_devolucion;
+    private $Devuelto;
 
-    public function __construct($num_pedido, $cod_libro, $cod_usuario, $fecha_salida, $fecha_maxima_dev, $fecha_devolucion, $devuelto)
+    public function __construct($Num_pedido, $Cod_libro, $Cod_usuario, $Fecha_salida, $Fecha_maxima_dev, $Fecha_devolucion, $Devuelto)
     {
-        $this->num_pedido = $num_pedido;
-        $this->cod_libro = $cod_libro;
-        $this->cod_usuario = $cod_usuario;
-        $this->fecha_salida = $fecha_salida;
-        $this->fecha_maxima_dev = $fecha_maxima_dev;
-        $this->fecha_devolucion = $fecha_devolucion;
-        $this->devuelto = $devuelto;
+        $this->Num_pedido = $Num_pedido;
+        $this->Cod_libro = $Cod_libro;
+        $this->Cod_usuario = $Cod_usuario;
+        $this->Fecha_salida = $Fecha_salida;
+        $this->Fecha_maxima_dev = $Fecha_maxima_dev;
+        $this->Fecha_devolucion = $Fecha_devolucion;
+        $this->Devuelto = $Devuelto;
     }
 
     public function toArray()
     {
         return [
-            'Num_pedido' => $this->getnum_pedido(),
-            'Cod_libro' => $this->getcod_libro(),
-            'Cod_usuario' => $this->getcod_usuario(),
-            'Fecha_salida' => $this->getfecha_salida(),
-            'Fecha_maxima_dev' => $this->getfecha_maxima_dev(),
-            'Fecha_devolucion' => $this->getfecha_devolucion(),
-            'Devuelto' => $this->getdevuelto()
+            'Num_pedido' => $this->getNum_pedido(),
+            'Cod_libro' => $this->getCod_libro(),
+            'Cod_usuario' => $this->getCod_usuario(),
+            'Fecha_salida' => $this->getFecha_salida(),
+            'Fecha_maxima_dev' => $this->getFecha_maxima_dev(),
+            'Fecha_devolucion' => $this->getFecha_devolucion(),
+            'Devuelto' => $this->getDevuelto()
         ];
     }
     /*Getters y settesrs */
 
-    public function getnum_pedido()
+    public function getNum_pedido()
     {
-        return $this->num_pedido;
+        return $this->Num_pedido;
     }
-    public function setnum_pedido($num_pedido)
+    public function setNum_pedido($Num_pedido)
     {
-        $this->num_pedido = $num_pedido;
+        $this->Num_pedido = $Num_pedido;
 
         return $this;
     }
-    public function getcod_libro()
+    public function getCod_libro()
     {
-        return $this->cod_libro;
+        return $this->Cod_libro;
     }
-    public function setcod_libro($cod_libro)
+    public function setCod_libro($Cod_libro)
     {
-        $this->cod_libro = $cod_libro;
+        $this->Cod_libro = $Cod_libro;
 
         return $this;
     }
-    public function getcod_usuario()
+    public function getCod_usuario()
     {
-        return $this->cod_usuario;
+        return $this->Cod_usuario;
     }
-    public function setcod_usuario($cod_usuario)
+    public function setCod_usuario($Cod_usuario)
     {
-        $this->cod_usuario = $cod_usuario;
+        $this->Cod_usuario = $Cod_usuario;
 
         return $this;
     }
-    public function getfecha_salida()
+    public function getFecha_salida()
     {
-        return $this->fecha_salida;
+        return $this->Fecha_salida;
     }
-    public function setfecha_salida($fecha_salida)
+    public function setFecha_salida($Fecha_salida)
     {
-        $this->fecha_salida = $fecha_salida;
+        $this->Fecha_salida = $Fecha_salida;
 
         return $this;
     }
-    public function getfecha_maxima_dev()
+    public function getFecha_maxima_dev()
     {
-        return $this->fecha_maxima_dev;
+        return $this->Fecha_maxima_dev;
     }
-    public function setfecha_maxima_dev($fecha_maxima_dev)
+    public function setFecha_maxima_dev($Fecha_maxima_dev)
     {
-        $this->fecha_maxima_dev = $fecha_maxima_dev;
+        $this->Fecha_maxima_dev = $Fecha_maxima_dev;
 
         return $this;
     }
-    public function getfecha_devolucion()
+    public function getFecha_devolucion()
     {
-        return $this->fecha_devolucion;
+        return $this->Fecha_devolucion;
     }
-    public function setfecha_devolucion($fecha_devolucion)
+    public function setFecha_devolucion($Fecha_devolucion)
     {
-        $this->fecha_devolucion = $fecha_devolucion;
+        $this->Fecha_devolucion = $Fecha_devolucion;
 
         return $this;
     }
-    public function getdevuelto()
+    public function getDevuelto()
     {
-        return $this->devuelto;
+        return $this->Devuelto;
     }
-    public function setdevuelto($devuelto)
+    public function setDevuelto($Devuelto)
     {
-        $this->devuelto = $devuelto;
+        $this->Devuelto = $Devuelto;
 
         return $this;
     }

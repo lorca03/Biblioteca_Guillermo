@@ -41,10 +41,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
-.activo{
-  color: #e75e8d !important;
-}
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -415,11 +411,10 @@ Header Style
 }
 
 .header-area .main-nav .logo img {
-  width: 140px;
+  width: 191px;
 }
 
 .background-header .main-nav .logo {
-  
   margin-top: 8px;
 }
 
@@ -481,6 +476,7 @@ Header Style
 .background-header .main-nav .nav li.has-sub ul.sub-menu li:last-child a:hover {
   padding-left: 25px !important;
 }
+
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
   color: #e75e8d !important;
@@ -586,7 +582,6 @@ Header Style
   transform-origin: 33% 0;
   top: 10px;
 }
-active
 
 .header-area .main-nav .menu-trigger.active span,
 .header-area .main-nav .menu-trigger.active span:before,
@@ -665,12 +660,11 @@ active
     top: 15px;
     right: 70px;
   }
-  /*
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #e75e8d!important;
     opacity: 1;
-  }*/
+  }
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
@@ -939,7 +933,6 @@ Gaming Library Style
   text-align: center;
   margin-bottom: -53px;
 }
-
 
 /* 
 ---------------------------------------------

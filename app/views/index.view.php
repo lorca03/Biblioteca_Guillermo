@@ -18,15 +18,27 @@ require_once 'app/views/partials/head.php';
   #tituloHome {
     text-align: center;
     color: #f05c8f;
+    background-color: transparent !important;
   }
   #tituloHome h1{
     color: #f05c8f;
+    text-shadow:2px 2px 3px #71c5d0;
+  }
+  #tituloHome img{
+    width: 80px;
+  }
+  #tituloHome .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
   #totales .total {
-    margin-top: 5px;
+    margin-top: 8px;
     text-align: center;
     padding: 12px;
     height: 85px;
+    box-shadow:2px 2px 5px #71c5d0;
     border-radius: 20px;
     border: 2px solid #71c5d0;
   }
@@ -54,7 +66,8 @@ require_once 'app/views/partials/head.php';
       <div class="col-lg-12">
         <div class="page-content">
           <div class="row" id="tituloHome">
-            <h1>Home</h1>
+            <div class="col home">
+            <img src="/assets/images/libros.PNG"><h1>Home</h1></div>
           </div><br><br>
           <div class="row" id="totales">
             <div class="col"></div>
