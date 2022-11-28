@@ -12,10 +12,10 @@
 
     <!-- Additional CSS Files -->
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
-<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
     <link rel="stylesheet" href="/assets/css/templatemo-cyborg-gaming.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/assets/css/stylesG.css">
     <script defer src="/assets/js/scriptsGuille.js"></script>
 
-  </head>
+</head>

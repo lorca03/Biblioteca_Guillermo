@@ -23,6 +23,13 @@ require_once 'partials/head.php';
     flex-direction: column;
   }
 
+  .verde {
+    color: #7AE03F;
+  }
+
+  .rojo {
+    color: #E0383E;
+  }
   #AñadirEntidad {
     padding: 10px;
     background-color: #f05c8f;
@@ -123,6 +130,12 @@ require_once 'partials/head.php';
     box-shadow:1px 1px 3px #71c5d0;
     color: #f05c8f;
   }
+  #modificar{
+    background-color: #f05c8f;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+  }
 </style>
 
 <body>
@@ -212,7 +225,7 @@ require_once 'partials/head.php';
         placeholder: "Buscar...",
         perPage: "{select} &nbsp;&nbsp;Numero de libros por pagina",
         noRows:'Este usuario no tiene libros' ,
-        info: "Libros del {start} al {end}.",
+        info: "Libros del {start} al {end}. Total: {rows} ",
       }
     })
   </script>
