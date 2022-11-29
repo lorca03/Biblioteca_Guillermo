@@ -3,10 +3,10 @@ require_once 'exeptions/database_exeption.php';
 
 class QueryBuilder
 {
-    private $conexion;
-    private $tabla;
-    private $entidad;
-    private $constructor;
+    protected $conexion;
+    protected $tabla;
+    protected $entidad;
+    protected $constructor;
 
     public function __construct($tabla, $entidad, $constructor = '')
     {

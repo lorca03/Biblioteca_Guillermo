@@ -7,9 +7,25 @@ class PrestamosRepositorio extends QueryBuilder
     {
         parent::__construct($tabla, $entidad, $argumentos);
     }
+    public function save($entidadObjeto)
+    {
+       /* echo get_class($entidadObjeto->getCod_usuario());*/
+        $sql = "SELECT * from $this->tabla where cod_usuario=$entidadObjeto->getCod_usuario() and devuelto='false'";
+        $pdoStatment = $this->conexion->prepare($sql);
+        if ($pdoStatment->execute() === false) {
+            throw new Database_exception('No se ha podido ejecutar la query solicitada');
+        }
+        $array=$pdoStatment->fetchAll();
+        $json=json_decode(file_get_contents('storage/configBiblio.json'));
+        if (count($array)>=$json){
+            throw new Database_exception('No puedes pedir mas libros. Ya tienes 5 prestamos sin devolver');
+        }else{
+            parent::save($entidadObjeto);
+        }
+    }
+
     public function librosUsuario($usuario)
     {
-         
         $nombre = substr($usuario,0,strpos($usuario,' '));
         $apellidos = substr($usuario,strpos($usuario,' ')+1);
         $sql = "select * from prestamos where cod_usuario=(select cod_usuario 
