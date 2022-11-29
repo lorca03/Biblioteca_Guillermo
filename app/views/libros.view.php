@@ -198,7 +198,7 @@ require_once 'partials/head.php';
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
 
 
 
