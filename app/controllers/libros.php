@@ -30,6 +30,8 @@ try {
     if ($enviar === 'Enviar') {
         $repoLibro = new LibrosRepositorio();
         $repoLibro->save(new Libro('', $_POST['Nombre'], $_POST['Autor'], $_POST['Genero'], $_POST['Pais'], $_POST['Paginas'], $_POST['Año']));
+        $message="Se ha guardado un nuevo libro";
+        App::get('logger')->add($message);
     }
 } catch (Exception $ex) {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
