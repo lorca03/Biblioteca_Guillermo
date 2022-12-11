@@ -3,7 +3,7 @@
 return [
     'database' => [
         'name' => 'biblioteca',
-        'username' => 'Guille',
+        'username' => 'guille',
         'password' => 'guille',
         'connection' => 'mysql:host=localhost',
         'opciones' => [ PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
