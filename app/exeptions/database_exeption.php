@@ -1,5 +1,6 @@
 <?php
-class NotFoundException extends Exception{
+namespace biblioteca\app\exeptions;
+class Database_exception extends Exception{
 
     public function __construct($mensaje) {
         parent::__construct($mensaje);

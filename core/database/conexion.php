@@ -1,5 +1,5 @@
 <?php
-  
+namespace database;
 class Conexion{
     public static function make(){ 
         try{

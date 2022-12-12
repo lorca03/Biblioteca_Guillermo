@@ -1,4 +1,5 @@
 <?php
+namespace biblioteca\app\entity;
 require_once 'database/IEntity.php';
 class Mensaje implements IEntity
 {

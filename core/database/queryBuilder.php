@@ -1,4 +1,5 @@
 <?php
+namespace database;
 require_once 'exeptions/database_exeption.php';
 
 class QueryBuilder

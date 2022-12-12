@@ -1,5 +1,8 @@
 <?php
-require_once 'database/IEntity.php';
+namespace biblioteca\app\entity;
+//require_once 'database/IEntity.php';
+use database\IEntity;
+
 class Libro implements IEntity
 {
     private $Cod_libro;

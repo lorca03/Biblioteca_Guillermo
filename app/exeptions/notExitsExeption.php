@@ -1,5 +1,5 @@
 <?php
-
+namespace biblioteca\app\exeptions;
 class NotExitsExeption extends Exception{
 
     public function __construct($mensaje) {

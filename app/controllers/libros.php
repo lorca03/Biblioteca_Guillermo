@@ -1,4 +1,7 @@
 <?php
+
+use repository\LibrosRepositorio;
+
 $repoLibros = new LibrosRepositorio();
 $arrayLibros = $repoLibros->findAll();
 $filastabla = '';

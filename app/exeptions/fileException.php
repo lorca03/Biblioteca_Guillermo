@@ -1,5 +1,5 @@
 <?php
-
+namespace biblioteca\app\exeptions;
 class File_exception extends Exception{
 
     public function __construct($mensaje) {

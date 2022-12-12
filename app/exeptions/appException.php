@@ -1,6 +1,6 @@
 <?php
-
-class Database_exception extends Exception{
+namespace  biblioteca\app\exeptions;
+class AppException extends Exception{
 
     public function __construct($mensaje) {
         parent::__construct($mensaje);

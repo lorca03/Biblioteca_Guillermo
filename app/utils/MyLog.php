@@ -1,4 +1,5 @@
 <?php
+namespace biblioteca\app\utils;
 class MyLog{
     private $log;
 

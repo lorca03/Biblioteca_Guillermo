@@ -1,4 +1,5 @@
 <?php
+namespace biblioteca\app\utils;
 require_once 'exeptions/fileException.php';
 
 class File

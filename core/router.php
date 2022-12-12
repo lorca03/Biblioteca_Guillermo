@@ -1,4 +1,5 @@
 <?php
+namespace core;
 App::bind('rutas',require 'app/routes.php');
 class Router
 {

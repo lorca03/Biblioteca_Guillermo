@@ -1,5 +1,8 @@
 <?php
-require_once 'database/queryBuilder.php';
+namespace biblioteca\app\repository;
+//require_once 'database/queryBuilder.php';
+
+use database\QueryBuilder;
 
 class LibrosRepositorio extends QueryBuilder
 {
@@ -11,6 +14,5 @@ class LibrosRepositorio extends QueryBuilder
     {
             $sql = 'select devuelto from prestamos where cod_libro='.$libro;
             return parent::execute($sql,'array');
-        
     }
 }

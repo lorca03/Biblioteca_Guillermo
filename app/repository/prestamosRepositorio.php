@@ -1,4 +1,5 @@
 <?php
+namespace biblioteca\app\repository;
 require_once 'database/queryBuilder.php';
 
 class PrestamosRepositorio extends QueryBuilder

@@ -1,5 +1,8 @@
 <?php
 
+use biblioteca\app\repository\ColaboradorRepositorio;
+use biblioteca\app\repository\MensajeRepositorio;
+
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 $error = false;
 $erroremail = false;
