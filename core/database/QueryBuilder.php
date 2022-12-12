@@ -1,6 +1,6 @@
 <?php
 namespace database;
-require_once 'exeptions/database_exeption.php';
+require_once 'exeptions/Database_exeption.php';
 
 class QueryBuilder
 {

@@ -6,28 +6,28 @@ require  __DIR__. '/../vendor/autoload.php';
 
 //require_once __DIR__ . '/../utils/MyLog.php';
 /* repositorios
-require_once 'repository/usuarioRepositorio.php';
-require_once 'repository/librosRepositorio.php';
-require_once 'repository/mensajeRepositorio.php';
-require_once 'repository/prestamosRepositorio.php';
+require_once 'repository/UsuarioRepositorio.php';
+require_once 'repository/LibrosRepositorio.php';
+require_once 'repository/MensajeRepositorio.php';
+require_once 'repository/PrestamosRepositorio.php';
 require_once 'repository/ColaboradorRepositorio.php';*/
 /*entidades
-require_once 'entity/colaborador.php';
-require_once 'entity/usuario.php';
-require_once 'entity/libro.php';
-require_once 'entity/mensaje.php';
-require_once 'entity/prestamo.php';
+require_once 'entity/Colaborador.php';
+require_once 'entity/Usuario.php';
+require_once 'entity/Libro.php';
+require_once 'entity/Mensaje.php';
+require_once 'entity/Prestamo.php';
 */
 
 
 //require_once 'database/IEntity.php';
 //require_once 'core/Request.php';
 //require_once 'core/App.php';
-//require_once 'database/queryBuilder.php';
+//require_once 'database/QueryBuilder.php';
 //require_once 'utils/activa.php';
-//require_once 'utils/file.php';
-//require_once 'core/router.php';
-//require_once 'exeptions/notFoundExeption.php';
+//require_once 'utils/File.php';
+//require_once 'core/Router.php';
+//require_once 'exeptions/NotFoundExeption.php';
 
 $config = require 'app/config.php';
 App::bind('config', $config);

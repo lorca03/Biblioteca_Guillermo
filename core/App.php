@@ -1,6 +1,6 @@
 <?php
 namespace core;
-require_once 'exeptions/appException.php';
+require_once 'exeptions/AppException.php';
 use database\Conexion;
 //use exeptions\AppException;
 class App{
