@@ -1,10 +1,15 @@
 <?php
+use biblioteca\app\entity\Usuario;
+use biblioteca\app\repository\ColaboradorRepositorio;
+use biblioteca\app\repository\PrestamosRepositorio;
+use biblioteca\app\repository\UsuarioRepositorio;
+
 $repoPersonal = new UsuarioRepositorio();
 $arrayUsuarios = $repoPersonal->findAll();
 $optionsUsuario = '';
 $filastabla = '<th COLSPAN="7">Selecciona un usuario</th>';
 $select = !empty($_POST['selectUsuarios']) ? $_POST['selectUsuarios'] : null;
-for ($i = 0; $i < count($arrayUsuarios); $i++) {
+for ($i = 0, $iMax = count($arrayUsuarios); $i < $iMax; $i++) {
     if ($select == $arrayUsuarios[$i]->getnombre() . ' ' . $arrayUsuarios[$i]->getApellidos()) {
         $optionsUsuario .= "<option selected>" . $arrayUsuarios[$i]->getnombre() . ' ' . $arrayUsuarios[$i]->getApellidos() . "</option>";
     } else {
@@ -15,7 +20,7 @@ if (isset($_POST['MostraLibros'])) {
     $filastabla = '';
     $repoPrestamos = new PrestamosRepositorio();
     $arrayLibrosUsuario = $repoPrestamos->librosUsuario($select);
-    for ($i = 0; $i < count($arrayLibrosUsuario); $i++) {
+    for ($i = 0, $iMax = count($arrayLibrosUsuario); $i < $iMax; $i++) {
         if ($arrayLibrosUsuario[$i]->getDevuelto()==='true') {
             $color='verde';
          } else {
@@ -32,7 +37,6 @@ if (isset($_POST['MostraLibros'])) {
       </tr>";
     };
 }
-
 
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 try {

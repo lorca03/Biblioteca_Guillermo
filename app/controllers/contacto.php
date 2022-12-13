@@ -1,5 +1,5 @@
 <?php
-
+use biblioteca\app\entity\Mensaje;
 use biblioteca\app\repository\ColaboradorRepositorio;
 use biblioteca\app\repository\MensajeRepositorio;
 

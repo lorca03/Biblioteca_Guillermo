@@ -1,6 +1,7 @@
 <?php
 namespace biblioteca\app\repository;
-require_once 'database/QueryBuilder.php';
+use biblioteca\app\exeptions\Database_exception;
+use database\QueryBuilder;
 
 class PrestamosRepositorio extends QueryBuilder
 {

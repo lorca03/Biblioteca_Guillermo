@@ -1,5 +1,9 @@
 <?php
 namespace database;
+use biblioteca\app\exeptions\Database_exception;
+use PDO;
+use PDOException;
+
 class Conexion{
     public static function make(){ 
         try{

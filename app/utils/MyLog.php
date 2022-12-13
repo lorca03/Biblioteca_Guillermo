@@ -1,12 +1,15 @@
 <?php
 namespace biblioteca\app\utils;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Level;
 class MyLog{
     private $log;
 
     private function __construct($filename)
     {
-        $this->log=new Monolog\Logger('name');
-        $this->log->pushHandler(new Monolog\Handler\StreamHandler($filename,Monolog\Level::Info));
+        $this->log=new Logger('name');
+        $this->log->pushHandler(new StreamHandler($filename,Level::Info));
     }
     public static function load($filename){
         return new MyLog($filename);

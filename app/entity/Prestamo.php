@@ -1,6 +1,7 @@
 <?php
 namespace biblioteca\app\entity;
-require_once 'database/IEntity.php';
+use database\IEntity;
+
 class Prestamo implements IEntity
 {
     private $Num_pedido;

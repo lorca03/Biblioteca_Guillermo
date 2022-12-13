@@ -5,6 +5,11 @@
   "autoload": {
     "psr-4": {
       "biblioteca\\": ""
-    }
+    },
+    "files": [
+      "app/utils/activa.php",
+      "app/config.php",
+      "app/routes.php"
+    ]
   }
 }

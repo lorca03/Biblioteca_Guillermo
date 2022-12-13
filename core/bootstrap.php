@@ -1,6 +1,8 @@
 <?php
 
 use biblioteca\app\utils\MyLog;
+use biblioteca\core\App;
+use biblioteca\core\Router;
 
 require  __DIR__. '/../vendor/autoload.php';
 
@@ -18,7 +20,6 @@ require_once 'entity/Libro.php';
 require_once 'entity/Mensaje.php';
 require_once 'entity/Prestamo.php';
 */
-
 
 //require_once 'database/IEntity.php';
 //require_once 'core/Request.php';

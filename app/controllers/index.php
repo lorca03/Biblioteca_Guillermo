@@ -1,4 +1,9 @@
 <?php
+use biblioteca\app\repository\ColaboradorRepositorio;
+use biblioteca\app\repository\LibrosRepositorio;
+use biblioteca\app\repository\MensajeRepositorio;
+use biblioteca\app\repository\PrestamosRepositorio;
+use biblioteca\app\repository\UsuarioRepositorio;
 
 $usuarios=new UsuarioRepositorio();
 $libros=new LibrosRepositorio();

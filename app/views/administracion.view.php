@@ -46,8 +46,6 @@ require_once 'partials/head.php';
 </style>
 
 <body>
-
-
   <!-- ***** Header Area Start ***** -->
   <?php require_once 'partials/header.part.php'   ?>
   <!-- ***** Header Area End ***** -->

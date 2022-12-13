@@ -1,8 +1,9 @@
 <?php
-namespace core;
-require_once 'exeptions/AppException.php';
+namespace biblioteca\core;
+
+use biblioteca\app\exeptions\AppException;
 use database\Conexion;
-//use exeptions\AppException;
+
 class App{
     private  static $contenedor=[];
 

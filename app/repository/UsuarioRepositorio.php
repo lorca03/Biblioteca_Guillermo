@@ -1,5 +1,7 @@
 <?php
 namespace biblioteca\app\repository;
+use database\QueryBuilder;
+
 require_once 'database/QueryBuilder.php';
 
 class UsuarioRepositorio extends QueryBuilder

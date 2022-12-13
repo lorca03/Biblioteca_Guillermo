@@ -1,6 +1,9 @@
 <?php
 namespace database;
-require_once 'exeptions/Database_exeption.php';
+use biblioteca\app\exeptions\Database_exception;
+use PDO;
+use PDOException;
+
 
 class QueryBuilder
 {

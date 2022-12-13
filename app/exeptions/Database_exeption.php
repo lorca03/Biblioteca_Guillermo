@@ -1,5 +1,7 @@
 <?php
 namespace biblioteca\app\exeptions;
+use Exception;
+
 class Database_exception extends Exception{
 
     public function __construct($mensaje) {

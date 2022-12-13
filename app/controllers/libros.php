@@ -1,11 +1,15 @@
 <?php
 
-use repository\LibrosRepositorio;
+
+use biblioteca\app\entity\Libro;
+use biblioteca\app\repository\ColaboradorRepositorio;
+use biblioteca\app\repository\LibrosRepositorio;
+use biblioteca\core\App;
 
 $repoLibros = new LibrosRepositorio();
 $arrayLibros = $repoLibros->findAll();
 $filastabla = '';
-for ($i = 0; $i < count($arrayLibros); $i++) {
+for ($i = 0, $iMax = count($arrayLibros); $i < $iMax; $i++) {
     $devueltoArray=$repoLibros->prestado($arrayLibros[$i]->getCod_libro());
     if (count($devueltoArray)==0) {
         $devuelto='true'; 

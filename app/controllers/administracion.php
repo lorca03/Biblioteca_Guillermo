@@ -1,16 +1,22 @@
 <?php
-
+use biblioteca\app\entity\Colaborador;
+use biblioteca\app\entity\Prestamo;
+use biblioteca\app\repository\ColaboradorRepositorio;
+use biblioteca\app\repository\LibrosRepositorio;
+use biblioteca\app\repository\PrestamosRepositorio;
+use biblioteca\app\repository\UsuarioRepositorio;
+use biblioteca\app\utils\File;
 
 $repoLibros = new LibrosRepositorio();
 $arrayLibros = $repoLibros->findAll();
 $filasLibros = '';
-for ($i = 0; $i < count($arrayLibros); $i++) {
+for ($i = 0, $iMax = count($arrayLibros); $i < $iMax; $i++) {
     $filasLibros .= "<option>" . $arrayLibros[$i]->getCod_libro() . ' - ' . $arrayLibros[$i]->getNombre_libro() . "</option>";
 }
 $repoUsuarios = new UsuarioRepositorio();
 $arrayUsuarios = $repoUsuarios->findAll();
 $filasUsuarios = '';
-for ($i = 0; $i < count($arrayUsuarios); $i++) {
+for ($i = 0, $iMax = count($arrayUsuarios); $i < $iMax; $i++) {
     $filasUsuarios .= "<option>" . $arrayUsuarios[$i]->getCod_usuario() . ' - '. $arrayUsuarios[$i]->getNombre() . ' ' . $arrayUsuarios[$i]->getApellidos() . "</option>";
 }
 

@@ -1,6 +1,5 @@
 <?php
 namespace biblioteca\app\repository;
-//require_once 'database/QueryBuilder.php';
 
 use database\QueryBuilder;
 
