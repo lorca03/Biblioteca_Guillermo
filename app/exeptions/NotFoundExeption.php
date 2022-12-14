@@ -1,5 +1,6 @@
 <?php
 namespace biblioteca\app\exeptions;
+use biblioteca\core\App;
 use Exception;
 
 class NotFoundException extends Exception{

@@ -1,11 +1,12 @@
 <?php
 namespace biblioteca\app\repository;
 use biblioteca\app\exeptions\Database_exception;
-use database\QueryBuilder;
+use biblioteca\core\database\QueryBuilder;
+use biblioteca\app\entity\Prestamo;
 
 class PrestamosRepositorio extends QueryBuilder
 {
-    public function __construct($tabla = 'prestamos', $entidad = 'Prestamo', $argumentos = ['Num_pedido', 'Cod_libro', 'Cod_usuario', 'Fecha_salida', 'Fecha_maxima_dev', 'Fecha_devolucion', 'Devuelto'])
+    public function __construct($tabla = 'prestamos', $entidad = Prestamo::class, $argumentos = ['Num_pedido', 'Cod_libro', 'Cod_usuario', 'Fecha_salida', 'Fecha_maxima_dev', 'Fecha_devolucion', 'Devuelto'])
     {
         parent::__construct($tabla, $entidad, $argumentos);
     }

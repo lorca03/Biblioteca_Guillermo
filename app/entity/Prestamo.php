@@ -1,6 +1,6 @@
 <?php
 namespace biblioteca\app\entity;
-use database\IEntity;
+use biblioteca\core\database\IEntity;
 
 class Prestamo implements IEntity
 {

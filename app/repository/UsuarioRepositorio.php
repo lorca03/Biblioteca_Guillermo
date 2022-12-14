@@ -1,12 +1,12 @@
 <?php
 namespace biblioteca\app\repository;
-use database\QueryBuilder;
+use biblioteca\core\database\QueryBuilder;
+use biblioteca\app\entity\Usuario;
 
-require_once 'database/QueryBuilder.php';
 
 class UsuarioRepositorio extends QueryBuilder
 {
-    public function __construct($tabla='usuarios',$entidad='Usuario',$argumentos=['Cod_usuario','Nombre','Apellidos','DNI','Domicilio','Poblacion','Fecha_nacimiento'])
+    public function __construct($tabla='usuarios',$entidad=Usuario::class,$argumentos=['Cod_usuario','Nombre','Apellidos','DNI','Domicilio','Poblacion','Fecha_nacimiento'])
     {
         parent::__construct($tabla, $entidad, $argumentos);
     }

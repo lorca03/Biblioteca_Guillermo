@@ -1,11 +1,11 @@
 <?php
 namespace biblioteca\app\repository;
-
-use database\QueryBuilder;
+use biblioteca\app\entity\Libro;
+use biblioteca\core\database\QueryBuilder;
 
 class LibrosRepositorio extends QueryBuilder
 {
-    public function __construct($tabla='libros',$entidad='Libro',$argumentos=['Cod_libro','Nombre_libro','Autor','Genero','Pais','Num_paginas','Ano_edicion'])
+    public function __construct($tabla='libros',$entidad=Libro::class,$argumentos=['Cod_libro','Nombre_libro','Autor','Genero','Pais','Num_paginas','Ano_edicion'])
     {
         parent::__construct($tabla, $entidad, $argumentos);
     }

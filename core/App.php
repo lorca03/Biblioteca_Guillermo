@@ -2,7 +2,8 @@
 namespace biblioteca\core;
 
 use biblioteca\app\exeptions\AppException;
-use database\Conexion;
+use biblioteca\core\database\Conexion;
+
 
 class App{
     private  static $contenedor=[];

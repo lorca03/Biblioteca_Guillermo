@@ -1,6 +1,8 @@
 <?php
 namespace biblioteca\core;
 use biblioteca\app\exeptions\NotFoundException;
+use biblioteca\core\App;
+use biblioteca\core\Request;
 
 App::bind('rutas',require 'app/routes.php');
 class Router

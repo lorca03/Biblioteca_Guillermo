@@ -1,6 +1,7 @@
 <?php
-namespace database;
+namespace biblioteca\core\database;
 use biblioteca\app\exeptions\Database_exception;
+use biblioteca\core\App;
 use PDO;
 use PDOException;
 

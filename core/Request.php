@@ -1,5 +1,5 @@
 <?php
-namespace core;
+namespace biblioteca\core;
 class Request{
 
     public static function uri()

@@ -1,6 +1,4 @@
 <?php
-
-
 use biblioteca\app\entity\Libro;
 use biblioteca\app\repository\ColaboradorRepositorio;
 use biblioteca\app\repository\LibrosRepositorio;
