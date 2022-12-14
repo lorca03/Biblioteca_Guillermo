@@ -2,6 +2,7 @@
 use biblioteca\app\entity\Mensaje;
 use biblioteca\app\repository\ColaboradorRepositorio;
 use biblioteca\app\repository\MensajeRepositorio;
+use biblioteca\core\App;
 
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 $error = false;
@@ -23,6 +24,8 @@ if ($enviar === 'Enviar') {
     if ($error==false && $erroremail==false) {
         $repoMensaje = new MensajeRepositorio();
         $repoMensaje->save(new Mensaje($email,$nombre,$mensaje));
+        $mailer=App::get('mailer');
+        $mailer->send('Gracias por contactarnos!',$email,$nombre,'Hola, bienvenido a nuestra biblioteca. Estamos orgullosos de tenerte en el equipo.');
     }
 }
 require_once 'app/views/contacto.view.php';
