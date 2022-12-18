@@ -25,7 +25,7 @@ if ($enviar === 'Enviar') {
         $repoMensaje = new MensajeRepositorio();
         $repoMensaje->save(new Mensaje($email,$nombre,$mensaje));
         $mailer=App::get('mailer');
-        $mailer->send('Gracias por contactarnos!',$email,$nombre,'Hola, bienvenido a nuestra biblioteca. Estamos orgullosos de tenerte en el equipo.');
+        $mailer->send('Gracias por contactarnos!',$email,$nombre,'Hola, bienvenido a nuestra biblioteca. Estamos orgullosos de tenerte en el equipo. Analizaremos su comentario, muchas gracias.');
     }
 }
 require_once 'app/views/contacto.view.php';
