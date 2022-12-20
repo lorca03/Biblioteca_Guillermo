@@ -26,4 +26,11 @@ class App{
         }
         return static::$contenedor['conexion'];
     }
+    public static function getRepository($className)
+    {
+        if (!array_key_exists($className,static::$contenedor)) {
+            static::$contenedor[$className]=new $className();
+        }
+        return static::$contenedor[$className];
+    }
 }

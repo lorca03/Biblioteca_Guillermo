@@ -4,7 +4,7 @@ use biblioteca\app\exeptions\NotFoundException;
 use biblioteca\core\App;
 use biblioteca\core\Request;
 
-App::bind('rutas',require 'app/routes.php');
+App::bind('rutas',require __DIR__.'/../app/routes.php');
 class Router
 {
     public static function load()

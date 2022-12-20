@@ -22,15 +22,15 @@ if ($enviar === 'Enviar') {
         }
     }
     if ($error==false && $erroremail==false) {
-        $repoMensaje = new MensajeRepositorio();
+        $repoMensaje = App::getRepository(MensajeRepositorio::class);
         $repoMensaje->save(new Mensaje($email,$nombre,$mensaje));
         $mailer=App::get('mailer');
         $mailer->send('Gracias por contactarnos!',$email,$nombre,'Hola, bienvenido a nuestra biblioteca. Estamos orgullosos de tenerte en el equipo. Analizaremos su comentario, muchas gracias.');
     }
 }
-require_once 'app/views/contacto.view.php';
+require_once '../app/views/contacto.view.php';
 
-$selectColab = new ColaboradorRepositorio();
+$selectColab = App::getRepository(ColaboradorRepositorio::class);
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);
 ?>

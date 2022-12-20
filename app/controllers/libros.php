@@ -4,7 +4,7 @@ use biblioteca\app\repository\ColaboradorRepositorio;
 use biblioteca\app\repository\LibrosRepositorio;
 use biblioteca\core\App;
 
-$repoLibros = new LibrosRepositorio();
+$repoLibros = App::getRepository(LibrosRepositorio::class);
 $arrayLibros = $repoLibros->findAll();
 $filastabla = '';
 for ($i = 0, $iMax = count($arrayLibros); $i < $iMax; $i++) {
@@ -33,7 +33,7 @@ for ($i = 0, $iMax = count($arrayLibros); $i < $iMax; $i++) {
 $enviar = !empty($_POST['enviar']) ? $_POST['enviar'] : null;
 try {
     if ($enviar === 'Enviar') {
-        $repoLibro = new LibrosRepositorio();
+        $repoLibro = App::getRepository(LibrosRepositorio::class);
         $repoLibro->save(new Libro('', $_POST['Nombre'], $_POST['Autor'], $_POST['Genero'], $_POST['Pais'], $_POST['Paginas'], $_POST['Año']));
         $message="Se ha guardado un nuevo libro";
         App::get('logger')->add($message);
@@ -41,9 +41,9 @@ try {
 } catch (Exception $ex) {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
 }
-require_once 'app/views/libros.view.php';
+require_once '../app/views/libros.view.php';
 
-$selectColab = new ColaboradorRepositorio();
+$selectColab = App::getRepository(ColaboradorRepositorio::class);
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);
 ?>

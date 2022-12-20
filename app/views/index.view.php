@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <?php
-require_once 'app/views/partials/head.php';
+require_once '../app/views/partials/head.php';
 ?>
 <style>
   .imagenesFooter {
@@ -56,7 +56,7 @@ require_once 'app/views/partials/head.php';
 
   <!-- ***** Header Area Start ***** -->
   <?php
-  require_once 'app/views/partials/header.part.php';
+  require_once '../app/views/partials/header.part.php';
   ?>
 
   <!-- ***** Header Area End ***** -->
@@ -67,7 +67,7 @@ require_once 'app/views/partials/head.php';
         <div class="page-content">
           <div class="row" id="tituloHome">
             <div class="col home">
-            <img src="/assets/images/libros.PNG"><h1>Home</h1></div>
+            <img src="assets/images/libros.PNG"><h1>Home</h1></div>
           </div><br><br>
           <div class="row" id="totales">
             <div class="col"></div>
@@ -93,14 +93,14 @@ require_once 'app/views/partials/head.php';
     </div>
   </div>
 
-  <?php require_once 'app/views/partials/footer.part.php';
+  <?php require_once '../app/views/partials/footer.part.php';
   ?>
 
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="/jquery/jquery.min.js"></script>
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 
 
 </body>

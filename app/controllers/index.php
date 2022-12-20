@@ -4,18 +4,19 @@ use biblioteca\app\repository\LibrosRepositorio;
 use biblioteca\app\repository\MensajeRepositorio;
 use biblioteca\app\repository\PrestamosRepositorio;
 use biblioteca\app\repository\UsuarioRepositorio;
+use biblioteca\core\App;
 
-$usuarios=new UsuarioRepositorio();
-$libros=new LibrosRepositorio();
-$prestamos=new PrestamosRepositorio();
-$mensajes=new MensajeRepositorio();
-$colaboradores=new ColaboradorRepositorio();
+$usuarios=App::getRepository(UsuarioRepositorio::class);
+$libros=App::getRepository(LibrosRepositorio::class);
+$prestamos=App::getRepository(PrestamosRepositorio::class);
+$mensajes=App::getRepository(MensajeRepositorio::class);
+$colaboradores=App::getRepository(ColaboradorRepositorio::class);
 $totales=[count($usuarios->findAll()),count($libros->findAll()),count($prestamos->findAll()),count($mensajes->findAll()),count($colaboradores->findAll())];
 
 
-require_once 'app/views/index.view.php';
+require_once '../app/views/index.view.php';
 
-$selectColab = new ColaboradorRepositorio();
+$selectColab = App::getRepository(ColaboradorRepositorio::class);
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);
 ?>

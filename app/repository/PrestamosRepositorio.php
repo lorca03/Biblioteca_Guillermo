@@ -18,7 +18,7 @@ class PrestamosRepositorio extends QueryBuilder
             throw new Database_exception('No se ha podido ejecutar la query solicitada');
         }
         $array=$pdoStatment->fetchAll();
-        $json=json_decode(file_get_contents('storage/configBiblio.json'));
+        $json=json_decode(file_get_contents('../storage/configBiblio.json'));
         if (count($array)>=$json->{'maxPrestamos'}){
             throw new Database_exception('No puedes pedir mas libros. Ya tienes 5 prestamos sin devolver');
         }else{

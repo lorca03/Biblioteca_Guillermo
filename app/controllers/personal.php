@@ -3,8 +3,9 @@ use biblioteca\app\entity\Usuario;
 use biblioteca\app\repository\ColaboradorRepositorio;
 use biblioteca\app\repository\PrestamosRepositorio;
 use biblioteca\app\repository\UsuarioRepositorio;
+use biblioteca\core\App;
 
-$repoPersonal = new UsuarioRepositorio();
+$repoPersonal = App::getRepository(UsuarioRepositorio::class);
 $arrayUsuarios = $repoPersonal->findAll();
 $optionsUsuario = '';
 $filastabla = '<th COLSPAN="7">Selecciona un usuario</th>';
@@ -18,7 +19,7 @@ for ($i = 0, $iMax = count($arrayUsuarios); $i < $iMax; $i++) {
 }
 if (isset($_POST['MostraLibros'])) {
     $filastabla = '';
-    $repoPrestamos = new PrestamosRepositorio();
+    $repoPrestamos = App::getRepository(PrestamosRepositorio::class);
     $arrayLibrosUsuario = $repoPrestamos->librosUsuario($select);
     for ($i = 0, $iMax = count($arrayLibrosUsuario); $i < $iMax; $i++) {
         if ($arrayLibrosUsuario[$i]->getDevuelto()==='true') {
@@ -47,9 +48,9 @@ try {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
 }
 
-require_once 'app/views/personal.view.php';
+require_once '../app/views/personal.view.php';
 
-$selectColab = new ColaboradorRepositorio();
+$selectColab = App::getRepository(ColaboradorRepositorio::class);
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);
 ?>

@@ -6,14 +6,15 @@ use biblioteca\app\repository\LibrosRepositorio;
 use biblioteca\app\repository\PrestamosRepositorio;
 use biblioteca\app\repository\UsuarioRepositorio;
 use biblioteca\app\utils\File;
+use biblioteca\core\App;
 
-$repoLibros = new LibrosRepositorio();
+$repoLibros = App::getRepository(LibrosRepositorio::class);
 $arrayLibros = $repoLibros->findAll();
 $filasLibros = '';
 for ($i = 0, $iMax = count($arrayLibros); $i < $iMax; $i++) {
     $filasLibros .= "<option>" . $arrayLibros[$i]->getCod_libro() . ' - ' . $arrayLibros[$i]->getNombre_libro() . "</option>";
 }
-$repoUsuarios = new UsuarioRepositorio();
+$repoUsuarios =App::getRepository(UsuarioRepositorio::class);
 $arrayUsuarios = $repoUsuarios->findAll();
 $filasUsuarios = '';
 for ($i = 0, $iMax = count($arrayUsuarios); $i < $iMax; $i++) {
@@ -27,21 +28,22 @@ try {
         $file = new File('imagen');
         $file->saveUploadFile(Colaborador::RUTA_IMAGEN);
 
-        $colaboradorReposito = new ColaboradorRepositorio();
+        $colaboradorReposito = App::getRepository(ColaboradorRepositorio::class);
         $colaboradorReposito->save(new Colaborador($_POST['nameCol'], $_POST['descripcionCol'], $file->getFilename()));
     }
     if ($enviarPrestamo === 'Enviar') {
-        $repoPrestamo = new PrestamosRepositorio();
+        $repoPrestamo = App::getRepository(PrestamosRepositorio::class);
         $repoPrestamo->save(new Prestamo('',substr($_POST['Libro'],0,strpos($_POST['Libro'],' ')),
         substr($_POST['usuario'],0,strpos($_POST['usuario'],' ')),
         $_POST['fechaSalida'],$_POST['fechaMaxima'],null,'false'));
+        App::get('mypdf')->new_document($_POST['usuario'],$_POST['Libro'],$_POST['fechaSalida']);
     }
 } catch (Exception $ex) {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
 }
-require_once 'app/views/administracion.view.php';
+require_once '../app/views/administracion.view.php';
 
-$selectColab = new ColaboradorRepositorio();
+$selectColab =App::getRepository(ColaboradorRepositorio::class);
 $arraycolab = $selectColab->findAll();
 shuffle($arraycolab);
 ?>

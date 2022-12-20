@@ -70,7 +70,7 @@ require_once 'partials/head.php';
               </form>
             </div>
             <div id="contactaContai" class="col-6">
-              <img  id="contacta" src="/assets/images/contacta.PNG" alt="NO Funciona la imagen">
+              <img id="contacta" src="assets/images/contacta.PNG" alt="NO Funciona la imagen">
             </div>
           </div>
         </div>
