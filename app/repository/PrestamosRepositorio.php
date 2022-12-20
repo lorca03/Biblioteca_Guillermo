@@ -10,6 +10,7 @@ class PrestamosRepositorio extends QueryBuilder
     {
         parent::__construct($tabla, $entidad, $argumentos);
     }
+
     public function save($entidadObjeto)
     {
         $sql = "SELECT * from ". $this->tabla ." where cod_usuario=". $entidadObjeto->getCod_usuario() ." and devuelto='false'";

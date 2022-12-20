@@ -33,10 +33,13 @@ try {
     }
     if ($enviarPrestamo === 'Enviar') {
         $repoPrestamo = App::getRepository(PrestamosRepositorio::class);
-        $repoPrestamo->save(new Prestamo('',substr($_POST['Libro'],0,strpos($_POST['Libro'],' ')),
+        /*$repoPrestamo->save(new Prestamo('',substr($_POST['Libro'],0,strpos($_POST['Libro'],' ')),
         substr($_POST['usuario'],0,strpos($_POST['usuario'],' ')),
-        $_POST['fechaSalida'],$_POST['fechaMaxima'],null,'false'));
-        App::get('mypdf')->new_document($_POST['usuario'],$_POST['Libro'],$_POST['fechaSalida']);
+        $_POST['fechaSalida'],$_POST['fechaMaxima'],null,'false'));*/
+        App::get('mypdf')->new_document(
+        substr($_POST['usuario'],strpos($_POST['usuario'],'-')+1),
+        substr($_POST['Libro'],strpos($_POST['Libro'],'-')+1),
+        $_POST['fechaSalida']);
     }
 } catch (Exception $ex) {
     echo "<script> alert('" . $ex->getMessage() . "')</script>";
