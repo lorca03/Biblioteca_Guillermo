@@ -3,6 +3,7 @@
     "monolog/monolog": "^3.2",
     "swiftmailer/swiftmailer": "6.0",
     "tecnickcom/tcpdf": "^6.6"
+
   },
   "autoload": {
     "psr-4": {
